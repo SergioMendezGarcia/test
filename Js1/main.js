@@ -24,10 +24,10 @@ const mascotas = ()=>{
 }
 
 
-window.onload = function(){
+(function(){
     let nmascotas = "";
     for ( let i = 0; i<mascotas().length; i++) {
         nmascotas += "<li>" + mascotas()[i] + "</li>";
     }
     lmascotas.innerHTML = nmascotas;
-};
+})();
