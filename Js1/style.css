@@ -16,6 +16,10 @@ section{
     background-color: #c996;
 }
 
+section ul, li{
+    background-color: #c996;
+}
+
 footer{
     padding: 1%;
     text-align: center;
