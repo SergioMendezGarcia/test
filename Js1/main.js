@@ -28,21 +28,22 @@ let sect = document.getElementById('sect');
 
         for ( let i = 1; i <= 1000; i++ ) {
             lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:pr});
-        }
+        };
 
         return lista;
     };
 
     const imprimirMascotas = ()=>{
         let nmascotas = "";
+        let lista = mascotas();
 
         for ( let i = 0; i<mascotas().length; i++) {
             nmascotas += `
                 <li>
-                    <span>${mascotas()[i].id} </span><br />
-                    <span>${mascotas()[i].nombre}, </span><br />
-                    <span>${mascotas()[i].precio}€</span><br />
-                    <span><button class="btn-comprar">Comprar</button></span>
+                    <span>${lista[i].id} </span><br />
+                    <span>${lista[i].nombre}, </span><br />
+                    <span>${lista[i].precio}€</span><br />
+                    <span><button data-id="${lista[i].id}" data-nombre="${lista[i].nombre}"}" class="btn-comprar">Comprar</button></span>
                 </li>
             `;
             //Plantillas ES6, se utilíza los `` para escribir dentro, y acepta tabulaciones y saltos de línea
@@ -52,8 +53,10 @@ let sect = document.getElementById('sect');
             //console.log('imprimeMascotas:', document.querySelectorAll('.btn-comprar'));
         document.querySelectorAll('.btn-comprar').forEach(function(unBtn){
             unBtn.onclick = function() {
-                alert('Hola!');
-            }
+                const id = unBtn.getAttribute('data-id');
+                const nombre = unBtn.getAttribute('data-nombre');
+                alert('Añadidio: ' + id + " " + nombre);
+            };
         });
 
     };

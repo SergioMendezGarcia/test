@@ -22,6 +22,7 @@ section ul, li:nth-of-type(odd){
 
 section ul, li:nth-of-type(even){
     background-color: #cf999999;
+    list-style: none;
 }
 
 span{
