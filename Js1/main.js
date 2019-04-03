@@ -20,7 +20,7 @@ const mascotas = ()=>{
         lista.push("Mascota" + i);
     }
 
-    return(lista);
+    return lista;
 }
 
 
