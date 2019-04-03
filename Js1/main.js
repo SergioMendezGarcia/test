@@ -25,7 +25,7 @@ const mascotas = ()=>{
 
 
 window.onload = function(){
-    var nmascotas = "";
+    let nmascotas = "";
     for ( let i = 0; i<mascotas().length; i++) {
         nmascotas += "<li>" + mascotas()[i] + "</li>";
     }
