@@ -16,8 +16,12 @@ section{
     background-color: #c996;
 }
 
-section ul, li{
-    background-color: #c996;
+section ul, li:nth-of-type(odd){
+    background-color: #cf999936;
+}
+
+section ul, li:nth-of-type(even){
+    background-color: #cf999999;
 }
 
 footer{
