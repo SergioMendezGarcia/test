@@ -25,7 +25,9 @@ const mascotas = ()=>{
 
 
 window.onload = function(){
+    var nmascotas = "";
     for ( let i = 0; i<mascotas().length; i++) {
-        lmascotas.innerHTML += "<li>" + mascotas()[i] + "</li>";
+        nmascotas += "<li>" + mascotas()[i] + "</li>";
     }
+    lmascotas.innerHTML = nmascotas;
 };
