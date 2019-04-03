@@ -24,6 +24,10 @@ section ul, li:nth-of-type(even){
     background-color: #cf999999;
 }
 
+span{
+    background-color: inherit;
+}
+
 footer{
     padding: 1%;
     text-align: center;
