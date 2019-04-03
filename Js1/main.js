@@ -13,7 +13,7 @@ let sect = document.getElementById('sect');
 //         dihola(x);
 //     }
 // })("Sergio");
-
+(function() {
 const mascotas = ()=>{
     let lista = [];
     for ( let i = 1; i <= 1000; i++ ) {
@@ -23,11 +23,13 @@ const mascotas = ()=>{
     return lista;
 }
 
-
-(function(){
+const imprimirMascotas = ()=>{
     let nmascotas = "";
     for ( let i = 0; i<mascotas().length; i++) {
         nmascotas += "<li>" + mascotas()[i] + "</li>";
     }
     lmascotas.innerHTML = nmascotas;
+}
+imprimirMascotas();
+
 })();
