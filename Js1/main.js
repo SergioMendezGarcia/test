@@ -62,7 +62,7 @@ let sect = document.getElementById('sect');
                 unBtn.style.border = "1px solid #900";
                 unBtn.style.color = "#fff";
                 unBtn.onclick = "";
-                unBtn.parentElement.parentElement.style.backgroundColor = "#c006";
+                unBtn.parentElement.parentElement.style.color = "#c00";
             };
         });
 
