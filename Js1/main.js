@@ -26,7 +26,7 @@ let sect = document.getElementById('sect');
         let er = Math.floor(Math.random()*14+1);
 
         for ( let i = 1; i <= 1000; i++ ) {
-            lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:Math.floor(Math.random()*200+50)});
+            lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:Math.floor(Math.random()*201+50)});
         };
 
         return lista;
@@ -40,10 +40,10 @@ let sect = document.getElementById('sect');
         for ( let i = 0; i<mascotas().length; i++) {
             nmascotas += `
                 <li>
-                    <span>${lista[i].id} </span><br />
-                    <span>${lista[i].nombre}, </span><br />
-                    <span>${lista[i].precio}€</span><br />
-                    <span><button data-id="${lista[i].id}" data-nombre="${lista[i].nombre}" data.precio="${lista[i].precio}"} class="btn-comprar">Comprar</button></span>
+                    <span>${lista[i].id}- </span>
+                    <span>${lista[i].nombre}, </span>
+                    <span>${lista[i].precio}€</span>
+                    <span><button data-id="${lista[i].id}" data-nombre="${lista[i].nombre}" data-precio="${lista[i].precio}"} class="btn-comprar">Comprar</button></span>
                 </li>
             `;
             //Plantillas ES6, se utilíza los `` para escribir dentro, y acepta tabulaciones y saltos de línea
@@ -56,10 +56,13 @@ let sect = document.getElementById('sect');
                 const id = unBtn.getAttribute('data-id');
                 const nombre = unBtn.getAttribute('data-nombre');
                 const precio = unBtn.getAttribute('data-precio');
+                carro.innerHTML += '<li>' + nombre + ', ' + precio + '€</li>';
                 alert('Añadidio: ' + nombre);
-                carro += `
-                    <li>${nombre}, ${precio}€</li>
-                `;
+                unBtn.style.backgroundColor = "#c00";
+                unBtn.style.border = "1px solid #900";
+                unBtn.style.color = "#fff";
+                unBtn.onclick = "";
+                unBtn.parentElement.parentElement.style.backgroundColor = "#c006";
             };
         });
 

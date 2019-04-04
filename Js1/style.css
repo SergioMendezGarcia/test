@@ -10,19 +10,34 @@ header, h1, div{
     background-color: #99c6;
 }
 
+h3{
+    background-color: #cf9f6f;
+}
+
+ol li:nth-of-type(odd){
+    background-color: #cf999936;
+}
+
+ol li:nth-of-type(even){
+    background-color: #cf999999;
+}
+
 section{
     padding: 1%;
     text-align: center;
     background-color: #c996;
 }
 
-section ul, li:nth-of-type(odd){
+section>ul, li:nth-of-type(odd){
     background-color: #cf999936;
+    list-style: none;
+    padding: 0.2%;
 }
 
-section ul, li:nth-of-type(even){
+section>ul, li:nth-of-type(even){
     background-color: #cf999999;
     list-style: none;
+    padding: 0.2%;
 }
 
 span{
