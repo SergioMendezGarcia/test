@@ -1,13 +1,1 @@
-console.log('Entra:...');
-
-let x = 1;
-console.log('x:...', x);
-
-setTimeout(function(){
-    x = x+1;
-    console.log('Dentro:...', x);
-},1000);
-
-x = 5;
-
-console.log('Sale:...', x);
+fetch('http://www.mocky.io/v2/5ca600d333000020542eab07');
