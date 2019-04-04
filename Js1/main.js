@@ -25,7 +25,7 @@ let sect = document.getElementById('sect');
         let lista = [];
         let er = Math.floor(Math.random()*14+1);
 
-        for ( let i = 1; i <= 1000; i++ ) {
+        for ( let i = 1; i <= 100; i++ ) {
             lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:Math.floor(Math.random()*201+50)});
         };
         console.log('mascotas', JSON.stringify(lista));
