@@ -24,10 +24,9 @@ let sect = document.getElementById('sect');
         const mascotas = ()=>{
         let lista = [];
         let er = Math.floor(Math.random()*14+1);
-        let pr = Math.floor(Math.random()*200+50);
 
         for ( let i = 1; i <= 1000; i++ ) {
-            lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:pr});
+            lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:Math.floor(Math.random()*200+50)});
         };
 
         return lista;
