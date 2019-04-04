@@ -35,6 +35,7 @@ let sect = document.getElementById('sect');
     const imprimirMascotas = ()=>{
         let nmascotas = "";
         let lista = mascotas();
+        let carro = document.getElementById('carro');
 
         for ( let i = 0; i<mascotas().length; i++) {
             nmascotas += `
@@ -42,7 +43,7 @@ let sect = document.getElementById('sect');
                     <span>${lista[i].id} </span><br />
                     <span>${lista[i].nombre}, </span><br />
                     <span>${lista[i].precio}€</span><br />
-                    <span><button data-id="${lista[i].id}" data-nombre="${lista[i].nombre}"}" class="btn-comprar">Comprar</button></span>
+                    <span><button data-id="${lista[i].id}" data-nombre="${lista[i].nombre}" data.precio="${lista[i].precio}"} class="btn-comprar">Comprar</button></span>
                 </li>
             `;
             //Plantillas ES6, se utilíza los `` para escribir dentro, y acepta tabulaciones y saltos de línea
@@ -54,7 +55,11 @@ let sect = document.getElementById('sect');
             unBtn.onclick = function() {
                 const id = unBtn.getAttribute('data-id');
                 const nombre = unBtn.getAttribute('data-nombre');
-                alert('Añadidio: ' + id + " " + nombre);
+                const precio = unBtn.getAttribute('data-precio');
+                alert('Añadidio: ' + nombre);
+                carro += `
+                    <li>${nombre}, ${precio}€</li>
+                `;
             };
         });
 
