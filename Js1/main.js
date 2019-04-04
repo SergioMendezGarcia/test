@@ -28,7 +28,8 @@ let sect = document.getElementById('sect');
         for ( let i = 1; i <= 1000; i++ ) {
             lista.push({id:i,nombre: genNombre() + ' ' +  genNombre(),edad:er,precio:Math.floor(Math.random()*201+50)});
         };
-
+        console.log('mascotas', JSON.stringify(lista));
+        
         return lista;
     };
 
