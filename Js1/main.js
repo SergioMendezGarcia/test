@@ -36,6 +36,7 @@ let sect = document.getElementById('sect');
         let nmascotas = "";
         let lista = mascotas();
         let carro = document.getElementById('carro');
+        const carrito = [];
 
         for ( let i = 0; i<mascotas().length; i++) {
             nmascotas += `
@@ -56,13 +57,20 @@ let sect = document.getElementById('sect');
                 const id = unBtn.getAttribute('data-id');
                 const nombre = unBtn.getAttribute('data-nombre');
                 const precio = unBtn.getAttribute('data-precio');
-                carro.innerHTML += '<li>' + nombre + ', ' + precio + '€</li>';
-                alert('Añadidio: ' + nombre);
-                unBtn.style.backgroundColor = "#c00";
-                unBtn.style.border = "1px solid #900";
-                unBtn.style.color = "#fff";
-                unBtn.onclick = "";
-                unBtn.parentElement.parentElement.style.color = "#c00";
+                const alreadyAdded = carrito.includes(id);
+                if ( !alreadyAdded ) {
+                    carro.innerHTML += '<li>' + nombre + ', ' + precio + '€</li>';
+                    carrito.push(id);
+                    // alert('Añadidio: ' + nombre);
+                    unBtn.style.backgroundColor = "#c00";
+                    unBtn.style.border = "1px solid #900";
+                    unBtn.style.color = "#fff";
+                    unBtn.parentElement.parentElement.style.color = "#c00";
+
+                    console.log('Carrito: ', carrito);
+                } else {
+                    console.log('Carrito: ya estaba añadido', id);
+                }
             };
         });
 
