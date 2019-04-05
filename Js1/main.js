@@ -33,13 +33,13 @@ let sect = document.getElementById('sect');
         return lista;
     };
 
-    const imprimirMascotas = ()=>{
+    const imprimirMascotas = function(lista){
         let nmascotas = "";
-        let lista = mascotas();
+        //let lista = mascotas();
         let carro = document.getElementById('carro');
         const carrito = [];
 
-        for ( let i = 0; i<mascotas().length; i++) {
+        for ( let i = 0; i<lista.length; i++) {
             nmascotas += `
                 <li>
                     <span>${lista[i].id}- </span>
@@ -77,5 +77,13 @@ let sect = document.getElementById('sect');
 
     };
 
-    imprimirMascotas();
+    fetch('http://www.mocky.io/v2/5ca61ddc3400005f0076af55')
+    .then( function(response) {
+        console.log('response:', response);
+        return response.json();
+    }).then( function(json_data) {
+         imprimirMascotas(json_data);
+    }).catch( function(err) {
+        console.log('err: ', err);
+    });
 })();
