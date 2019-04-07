@@ -1,5 +1,3 @@
-let sect = document.getElementById('sect');
-
 // sect.onclick = function() {
 //     dihola('Sergio');
 // };
@@ -13,6 +11,10 @@ let sect = document.getElementById('sect');
 //         dihola(x);
 //     }
 // })("Sergio");
+
+
+let sect = document.getElementById('sect');
+
 (function() {
     const nombres = ['missy','rex','perro','bob','luna','max','sebes','gina','balto','taxi'];
 
@@ -70,7 +72,7 @@ let sect = document.getElementById('sect');
 
                     console.log('Carrito: ', carrito);
                 } else {
-                    console.log('Carrito: ya estaba añadido', id);
+                    console.log('Carrito: ',id, ' ya estaba añadido');
                 }
             };
         });
