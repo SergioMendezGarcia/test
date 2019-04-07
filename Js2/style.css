@@ -18,13 +18,14 @@ article{
 
 article:first-of-type{
     text-align: center;
+    text-transform: capitalize;
 }
 
 article:last-of-type {
     text-align: center;
 }
 
-article h4{
+article:last-of-type h4{
     text-align: left;
 }
 
@@ -39,7 +40,16 @@ button{
     background-color: #999;
 }
 
-img:last-of-type{
+#match img{
+    width: 50%;
+    margin: 1% 2% -20%;
+    cursor: pointer;
+}
+
+#match{
+    padding: 0;
+    margin: 0;
     width: 6%;
-    margin: 1% 2% -1%;
+    background-color: #fff;
+    border: none;
 }
